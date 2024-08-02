@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { TextField, Button, Container, Typography, Box } from "@mui/material";
+import { TextField, Button, Typography, Box, Container } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
