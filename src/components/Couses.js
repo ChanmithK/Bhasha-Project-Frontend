@@ -34,7 +34,7 @@ const CoursesTable = () => {
       .catch((error) => {
         console.error("There was an error fetching the courses!", error);
       });
-  }, []);
+  }, [user]);
 
   return (
     <Box>
