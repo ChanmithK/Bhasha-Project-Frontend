@@ -25,11 +25,15 @@ const AddCourse = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/courses", formData, {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      })
+      .post(
+        "https://bhasha-project-backend-production.up.railway.app/api/courses",
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      )
       .then((res) => {
         console.log(res.data);
         setFormData({

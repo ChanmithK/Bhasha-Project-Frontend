@@ -21,11 +21,14 @@ const CoursesTable = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/courses", {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      })
+      .get(
+        "https://bhasha-project-backend-production.up.railway.app/api/courses",
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      )
       .then((response) => {
         setCourses(response.data);
       })

@@ -24,11 +24,14 @@ const Students = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/students", {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      })
+      .get(
+        "https://bhasha-project-backend-production.up.railway.app/api/students",
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      )
       .then((response) => {
         setStudents(response.data);
       })

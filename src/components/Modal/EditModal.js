@@ -12,7 +12,7 @@ const EditModal = ({ open, handleClose, project, onUpdate }) => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/projects/${project._id}`,
+        `https://bhasha-project-backend-production.up.railway.app/api/projects/${project._id}`,
         { title, description },
         {
           headers: {

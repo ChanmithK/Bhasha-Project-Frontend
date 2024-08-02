@@ -7,17 +7,20 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const login = async (email, password) => {
-    const response = await axios.post("http://localhost:5000/api/auth/login", {
-      email,
-      password,
-    });
+    const response = await axios.post(
+      "https://bhasha-project-backend-production.up.railway.app/api/auth/login",
+      {
+        email,
+        password,
+      }
+    );
     setUser(response.data);
     localStorage.setItem("user", JSON.stringify(response.data));
   };
 
   const register = async (username, email, password) => {
     const response = await axios.post(
-      "http://localhost:5000/api/auth/register",
+      "https://bhasha-project-backend-production.up.railway.app/api/auth/register",
       {
         username,
         email,
