@@ -9,8 +9,10 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const { register } = useContext(AuthContext);
 
+  //Navigate hook
   const navigate = useNavigate();
 
+  // submit handler
   const submitHandler = async (e) => {
     e.preventDefault();
     await register(username, email, password);

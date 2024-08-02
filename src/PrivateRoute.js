@@ -6,6 +6,7 @@ const PrivateRoute = ({ children }) => {
   const { user } = useContext(AuthContext);
   const location = useLocation();
 
+  // Redirect to login page if user is not authenticated
   return user ? children : <Navigate to="/login" state={{ from: location }} />;
 };
 

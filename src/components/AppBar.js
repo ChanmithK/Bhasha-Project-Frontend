@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 
 export default function ButtonAppBar() {
+  // Navigate hook
   const navigate = useNavigate();
 
   return (

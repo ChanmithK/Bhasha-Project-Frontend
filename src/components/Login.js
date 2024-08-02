@@ -17,6 +17,7 @@ const Login = () => {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  // submit handler
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
@@ -28,6 +29,7 @@ const Login = () => {
     }
   };
 
+  // handle register click
   const handleRegisterClick = () => {
     navigate("/register");
   };

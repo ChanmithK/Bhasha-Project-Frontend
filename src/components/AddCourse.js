@@ -5,16 +5,20 @@ import ButtonAppBar from "./AppBar";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
+// Function to handle form submission
 const AddCourse = () => {
+  // State to manage form input data
   const [formData, setFormData] = useState({
     courseName: "",
     department: "",
     fee: "",
   });
 
+  // Function to handle form input changes
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  // Function to handle form submission
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -22,6 +26,7 @@ const AddCourse = () => {
     });
   };
 
+  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     axios

@@ -6,6 +6,7 @@ const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
+  // login function
   const login = async (email, password) => {
     const response = await axios.post(
       "https://bhasha-project-backend-production.up.railway.app/api/auth/login",
@@ -18,6 +19,7 @@ const AuthProvider = ({ children }) => {
     localStorage.setItem("user", JSON.stringify(response.data));
   };
 
+  // register function
   const register = async (username, email, password) => {
     const response = await axios.post(
       "https://bhasha-project-backend-production.up.railway.app/api/auth/register",
@@ -31,6 +33,7 @@ const AuthProvider = ({ children }) => {
     localStorage.setItem("user", JSON.stringify(response.data));
   };
 
+  // logout function
   const logout = () => {
     setUser(null);
     localStorage.removeItem("user");

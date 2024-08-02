@@ -15,6 +15,7 @@ import ButtonAppBar from "./AppBar";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
+//Function to add a new student
 const AddStudent = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -47,6 +48,7 @@ const AddStudent = () => {
       });
   }, [user.token]);
 
+  // Function to handle form input changes
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -54,6 +56,7 @@ const AddStudent = () => {
     });
   };
 
+  // Function to handle form selection changes
   const handleSelectChange = (e) => {
     setFormData({
       ...formData,
@@ -61,6 +64,7 @@ const AddStudent = () => {
     });
   };
 
+  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 

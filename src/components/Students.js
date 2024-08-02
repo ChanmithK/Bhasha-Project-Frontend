@@ -40,10 +40,12 @@ const Students = () => {
       });
   }, [user.token]);
 
+  // Function to handle search query
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
   };
 
+  // Filter students based on search query
   const filteredStudents = students.filter((student) =>
     `${student.firstName} ${student.lastName}`
       .toLowerCase()
